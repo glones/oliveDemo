@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.example.testforconbo.grpc";
+option java_outer_classname = "DetectionsProto";
+
+package detection;
+
+service DetectionIngestion {
+  rpc SendDetections(DetectionsBatch) returns (IngestionResponse);
+}
+
+message DetectionRecord {
+  string uniqueId = 1;
+  string type = 2;
+  double confidence = 3;
+  string timestamp = 4;
+  double lat = 5;
+  double lon = 6;
+}
+
+message DetectionsBatch {
+  string source = 1;
+  repeated DetectionRecord records = 2;
+}
+
+message IngestionResponse {
+  bool success = 1;
+  string message = 2;
+}

@@ -14,7 +14,6 @@ services:
     depends_on:
       - zookeeper
     environment:
-      # ——— Основні параметри ———
       - KAFKA_BROKER_ID=1
       - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
       - KAFKA_CFG_DEFAULT_REPLICATION_FACTOR=1

@@ -28,7 +28,7 @@ This project implements a real-time object detection ingestion pipeline using **
 ### Running the Application
 1. **Clone the Repository**
    ```sh
-   git clone <repository-url>
+   git clone git@github.com:glones/oliveDemo.git
    cd testForConbo
    ```
 
